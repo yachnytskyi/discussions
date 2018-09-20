@@ -22,7 +22,6 @@ class DiscussionsController < ApplicationController
 
   # GET /discussions/1/edit
   def edit
-    @channels =
   end
 
   # POST /discussions
@@ -73,6 +72,7 @@ class DiscussionsController < ApplicationController
 
     def find_channels
       @channels = Channel.all.order('created_at desc')
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def discussion_params
