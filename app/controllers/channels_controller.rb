@@ -31,7 +31,7 @@ class ChannelsController < ApplicationController
 
     respond_to do |format|
       if @channel.save
-        format.html { redirect_to channels_paths, notice: 'Channel was successfully created.' }
+        format.html { redirect_to channels_path, notice: 'Channel was successfully created.' }
         format.json { render :show, status: :created, location: @channel }
       else
         format.html { render :new }
@@ -72,6 +72,6 @@ class ChannelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def channel_params
-      params.fetch(:channel, {})
+      params.require(:channel).permit(:channel)
     end
 end
