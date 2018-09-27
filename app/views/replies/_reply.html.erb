@@ -14,6 +14,7 @@
       <%= markdown(reply.reply) %>
     </p>
   </div>
+  <% if reply_author(reply) %>
   <nav class="level is-mobile">
     <div class="level-left">
       <a class="level-item">
@@ -27,5 +28,8 @@
         <% end %>
       </a>
     </div>
-  </article>
+  </nav>
+  <% end %>
+</div>
+</article>
 </div>
