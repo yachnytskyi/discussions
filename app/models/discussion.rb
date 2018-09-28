@@ -5,4 +5,11 @@ class Discussion < ApplicationRecord
 
   validates :title, :content, presence: true
   resourcify
+
+  extend FriendlId
+  frienly_id :title, use: [:slugged, :finders]
+
+  def should_generate_new_friendly_id?
+    titled_changed?
+  end
 end
