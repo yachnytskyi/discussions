@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
-  
+
   resources :channels
   resources :discussions do
     resources :replies
   end
-  root 'home#index'
+  root 'channels#index'
 
 
 end
