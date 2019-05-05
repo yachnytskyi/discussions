@@ -1,4 +1,4 @@
-Discussions created on Ruby on Rails 
+Discussions created on Ruby on Rails and JavaScript
 Thanks for viewing the discussions, it was created for learning and practice. Discussions - a simple pet project
 
 Build Status
